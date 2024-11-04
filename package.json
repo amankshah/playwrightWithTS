@@ -1,0 +1,26 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/PageObjectImplementation/ClientApp.spec.js --headed",
+    "customConfig": "npx playwright test tests/PageObjectImplementation/ParameterizedPurchaseUsingFixers.spec.js --config playwright.config1.js",
+    "chrome": "npx playwright test tests/PageObjectImplementation/ParameterizedPurchaseUsingFixers.spec.js --config playwright.config1.js --project=chromium2",
+    "web": "npx playwright test --grep=@web --config playwright.config1.js",
+    "api": "npx playwright test --grep=@api --config playwright.config1.js",
+    "cucumberRegression": "npx cucumber-js --tags '@Regression' --retry 1 --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.3.0",
+    "allure-playwright": "^3.0.0-beta.12"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "exceljs": "^4.4.0"
+  }
+}

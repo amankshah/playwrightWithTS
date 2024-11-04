@@ -1,0 +1,18 @@
+ npx cucumber-js //to generate codes
+ 
+
+ //to run a single feature file 
+ npx cucumber-js features\errorValidation.feature
+
+ //running test cases based on tags 
+ npx cucumber-js --tags "@Regression"
+
+// //to run a 2 senarious parallel feature file 
+ npx cucumber-js features\errorValidation.feature --parallel 2   --exit 
+
+
+ //to generate html report 
+  npx cucumber-js features\errorValidation.feature --parallel 2   --exit --format html:cucumber-report.html
+
+  //To Set retry of for failed test cases 
+   npx cucumber-js --tags "@Regression" --retry 1 --exit --format html:cucumber-report.html
